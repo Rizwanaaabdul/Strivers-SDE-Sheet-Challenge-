@@ -1,7 +1,7 @@
 Welcome to the Striver's SDE Sheet Challenge 2023! 
 This challenge is designed to test your coding skills and problem-solving abilities. It consists of a curated set of coding questions covering all concepts required to crack interviews.
 
-## Challenge details:
+## Challenge details
 Duration : 60 days <br>
 Number of Questions:  191
 
