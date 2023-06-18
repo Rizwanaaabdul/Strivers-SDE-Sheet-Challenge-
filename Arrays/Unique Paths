@@ -1,0 +1,15 @@
+Problem Link : https://www.codingninjas.com/codestudio/problems/unique-paths_8230802?challengeSlug=striver-sde-challenge
+
+#include <bits/stdc++.h> 
+int uniquePaths(int m, int n) {
+	        int N = n + m - 2;
+            int r = m - 1; 
+            double res = 1;
+            
+            for (int i = 1; i <= r; i++)
+                res = res * (N - r + i) / i;
+            return (int)res;	
+}
+
+Time Complexity : 0(m-1), Since the loop runs for r times, it is equivalent to m-1.
+Sapce Complexity : 0(1)
