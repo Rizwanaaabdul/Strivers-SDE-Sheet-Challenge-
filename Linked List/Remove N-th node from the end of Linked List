@@ -1,0 +1,54 @@
+Problem link  : https://www.codingninjas.com/studio/problems/799912?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=1
+
+/*
+Following is the class structure of the Node class:
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+    Node()
+    {
+        this->data = 0;
+        next = NULL;
+    }
+    Node(int data)
+    {
+        this->data = data; 
+        this->next = NULL;
+    }
+    Node(int data, Node* next)
+    {
+        this->data = data;
+        this->next = next;
+    }
+};
+*/
+
+Node* removeKthNode(Node* head, int k)
+{
+    Node *dummy=new Node();
+    dummy->next=head;
+
+    Node *temp=head;
+    int cnt=0;
+    while(temp!=NULL){
+        cnt++;
+        temp=temp->next;
+    }
+
+    int delete_node=cnt-k;
+    temp=dummy;
+    while(delete_node){
+        temp=temp->next;
+        delete_node--;
+
+    }
+    temp->next=temp->next->next;
+    return dummy->next;
+
+}
+
+Time Complexity : O(N)
+Space Complexity : O(1)
